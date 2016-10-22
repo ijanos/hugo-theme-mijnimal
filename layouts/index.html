@@ -1,0 +1,23 @@
+{{- partial "header.html" . }}
+
+<section class="frontpage">
+
+  <section class="posts">
+    <h1>Posts</h1>
+    <div>
+      {{- range where .Data.Pages "Section" "post" }}
+        {{- .Render "item" }}
+      {{- end }}
+    </div>
+  </section>
+
+  <aside class="tags">
+        <h1>Tags</h1>
+        {{- range $name, $taxonomy := .Site.Taxonomies.tags }}
+          <a class="tag" href="/tags/{{ $name | urlize }}">{{ $name }}</a>
+        {{- end }}
+  </aside>
+
+</section>
+
+{{- partial "footer.html" . }}

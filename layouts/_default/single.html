@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+{{ $baseurl := .Site.BaseURL }}
+
+<article class="content">
+  <header>
+    <div>
+     <h1 id="post-title">{{ .Title }}</h1>
+     <span id="date"> {{ .Date.Format "2006-01-02" }} </span>
+    </div>
+
+    {{if .Params.tags }}
+    <div class="tags">
+      {{ range .Params.tags }}
+        <a href="{{ $baseurl }}tags/{{ . | urlize }}" class="tag">{{ . }}</a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </header>
+  {{ .Content }}
+</article>
+
+{{ partial "footer.html" . }}

@@ -1,0 +1,12 @@
+name = "ijnimal"
+license = "MIT"
+licenselink = "https://github.com/ijanos/hugo-theme-mijnimal/blob/master/LICENSE"
+description = "A minimal theme for my personal blog"
+homepage = "http://github.com/ijanos/hugo-theme-mijnimal"
+tags = ["minimal", "clean", "simple", "html5"]
+features = ["blog"]
+min_version = 0.16
+
+[author]
+  name = "ijanos"
+  homepage = "blog.janosilles.com"
