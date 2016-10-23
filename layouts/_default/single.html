@@ -1,5 +1,5 @@
-{{ partial "header.html" . }}
-{{ $baseurl := .Site.BaseURL }}
+{{- partial "header.html" . }}
+{{- $baseurl := .Site.BaseURL }}
 
 <article class="content">
   <header>
@@ -10,13 +10,13 @@
 
     {{if .Params.tags }}
     <div class="tags">
-      {{ range .Params.tags }}
+      {{- range .Params.tags }}
         <a href="{{ $baseurl }}tags/{{ . | urlize }}" class="tag">{{ . }}</a>
-      {{ end }}
+      {{- end }}
     </div>
     {{ end }}
   </header>
   {{ .Content }}
 </article>
 
-{{ partial "footer.html" . }}
+{{- partial "footer.html" . }}
