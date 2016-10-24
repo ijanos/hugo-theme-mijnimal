@@ -1,11 +1,11 @@
 {{- partial "header.html" . }}
 {{- $baseurl := .Site.BaseURL }}
 
-<article class="content">
+<article class="post">
   <header>
     <div>
-     <h1 id="post-title">{{ .Title }}</h1>
-     <span id="date"> {{ .Date.Format "2006-01-02" }} </span>
+     <h1 class="title">{{ .Title }}</h1>
+     <span class="date"> {{ .Date.Format "2006-01-02" }}</span>
     </div>
 
     {{if .Params.tags }}

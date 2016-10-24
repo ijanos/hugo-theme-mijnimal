@@ -61,14 +61,14 @@ a:focus {
     position: relative;
 }
 
-header.navigation {
+.navigation {
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-ul.menu {
+.navigation .menu {
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
@@ -113,7 +113,7 @@ a.tag:hover {
     text-decoration: none;
 }
 
-.content > header {
+.post > header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -121,6 +121,6 @@ a.tag:hover {
     flex-wrap: wrap;
 }
 
-#post-title {
+.post .title {
     margin-bottom: 0;
 }
