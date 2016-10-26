@@ -3,7 +3,7 @@
 <section class="frontpage">
 
   <section class="posts">
-    <h1>Posts</h1>
+    <h1>blog posts</h1>
     <div>
       {{- range where .Data.Pages "Section" "post" }}
         {{- .Render "item" }}
@@ -12,7 +12,7 @@
   </section>
 
   <aside class="tags">
-        <h1>Tags</h1>
+        <h1>tags</h1>
         {{- range $name, $taxonomy := .Site.Taxonomies.tags }}
           <a class="tag" href="/tags/{{ $name | urlize }}">{{ $name }}</a>
         {{- end }}
