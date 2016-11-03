@@ -1,8 +1,11 @@
 {{- partial "header.html" . }}
 
 <section id="main">
+  <header>
    <h1 id="title">posts tagged <span class="tag">{{ .Title }}</span></h1>
-   <a href="{{ .RSSlink }}">RSS</a>
+   <a class="rsslink" href="{{ .RSSlink }}">RSS</a>
+  </header>
+
    {{- range .Data.Pages }}
      {{- .Render "item" }}
    {{- end }}
