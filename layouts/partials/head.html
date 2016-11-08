@@ -1,7 +1,13 @@
 <head>
     <meta charset="utf-8">
     <base href="{{ .Site.BaseURL }}">
-    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <title>
+     {{- if eq .Title .Site.Title }}
+     {{- .Title }}
+     {{- else }}
+     {{- .Title }} | {{ .Site.Title }}
+     {{- end -}}
+    </title>
     <link rel="canonical" href="{{ .Permalink }}">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css">
     <link href="{{ .Site.BaseURL }}post/index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
