@@ -11,6 +11,9 @@ h1 {
     font-size: 2.3em;
     margin: 0;
     color: #222;
+    margin-top: 0.5em;
+    margin-bottom: 0.2em;
+
 }
 
 h2 {
@@ -66,11 +69,6 @@ hr {
 .posts .list,
 .tags div {
     margin-left: 1em;
-}
-
-.frontpage section h1 {
-    margin-top: 0.5em;
-    margin-bottom: 0.2em;
 }
 
 .post-title {
