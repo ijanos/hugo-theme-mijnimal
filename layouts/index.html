@@ -1,26 +1,23 @@
 {{- partial "header.html" . }}
-
 <section class="frontpage">
-
-	<section class="posts">
-		<header>
-		  <h1>blog posts</h1>
-		  <a class="rsslink" href="post/index.xml" type="application/rss+xml" target="_blank">RSS</a>
-		</header>
-		<div class="list">{{- range where .Data.Pages "Section" "post" }}
-            {{- .Render "item" }}
-        {{- end }}</div>
-	</section>
-
-	<section class="tags">
-		<h1>tags</h1>
-		<div>
-			{{- range $name, $taxonomy := .Site.Taxonomies.tags }}
-			  <a class="tag" href="/tags/{{ $name | urlize }}">{{ $name }}</a>
+  <section class="posts">
+    <header>
+      <h1>blog posts</h1>
+      <a class="rsslink" href="post/index.xml" type="application/rss+xml" target="_blank">RSS</a>
+    </header>
+    <div class="list">
+      {{- range where .Data.Pages "Section" "post" }}
+        {{- .Render "item" }}
       {{- end }}
-		</div>
-	</section>
-
+    </div>
+  </section>
+  <section class="tags">
+    <h1>tags</h1>
+    <div>
+      {{- range $name, $taxonomy := .Site.Taxonomies.tags }}
+        <a class="tag" href="/tags/{{ $name | urlize }}">{{ $name }}</a>
+      {{- end }}
+    </div>
+  </section>
 </section>
-
 {{- partial "footer.html" . }}
