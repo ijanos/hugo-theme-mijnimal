@@ -13,7 +13,6 @@ h1 {
     color: #222;
     margin-top: 0.5em;
     margin-bottom: 0.2em;
-
 }
 
 h2 {
@@ -98,9 +97,7 @@ hr {
     align-items: baseline;
 }
 
-
 /* menu separator */
-
 .menu li+li::before {
     content: "|";
     padding: 0 3px;
@@ -124,7 +121,6 @@ hr {
     font-weight: bold;
     margin-bottom: 0.5em;
 }
-
 
 .tag {
     padding: 2px;
