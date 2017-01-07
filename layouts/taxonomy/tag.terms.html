@@ -1,0 +1,9 @@
+{{- partial "header.html" . -}}
+
+<h1>All tags</h1>
+<p>
+{{- range $name, $taxonomy := .Site.Taxonomies.tags }}
+  <a class="tag" href="/tags/{{ $name | urlize }}">{{ $name }}</a>
+{{- end }}
+</p>
+{{- partial "footer.html" . }}
