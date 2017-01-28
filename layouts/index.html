@@ -1,6 +1,5 @@
 {{- partial "header.html" . -}}
 <section class="frontpage">
-
     <h1> Welcome! </h1>
     <p>
         Hi, I'm János and this is my blog.
@@ -12,10 +11,11 @@
       <a class="rsslink" href="post/index.xml" type="application/rss+xml" target="_blank">RSS</a>
     </header>
     <div class="list">
-      {{- range where .Data.Pages "Section" "post" }}
+      {{- range first 4 (where .Data.Pages "Section" "post") }}
         {{- .Render "item" }}
       {{- end }}
     </div>
+    <a hr href="/post">more</a>
   </section>
   <section class="tags">
     <h1>tags</h1>
